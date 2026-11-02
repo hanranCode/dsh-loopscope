@@ -1,0 +1,54 @@
+name: Bug report
+description: Report something that renders or behaves incorrectly in LOOPScope
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please include enough Session detail to reproduce
+        the view; screenshots and console errors help a lot.
+  - type: input
+    id: dsh-version
+    attributes:
+      label: DSH version
+      description: Output of `dsh --version`
+      placeholder: 0.2.2-alpha.2
+    validations:
+      required: true
+  - type: dropdown
+    id: view
+    attributes:
+      label: View
+      options:
+        - LOOP view (循环)
+        - Duration bars (时长条)
+        - Timeline (时间轴)
+        - Header action / tab opening
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+      description: What rendered instead? Include a screenshot when possible.
+    validations:
+      required: true
+  - type: textarea
+    id: console
+    attributes:
+      label: Console errors
+      description: DevTools → Console output (red errors), plus the plugin's console filter if any.
+      render: shell
+  - type: input
+    id: browser
+    attributes:
+      label: Browser / OS
+      placeholder: Chrome 141 / macOS 15

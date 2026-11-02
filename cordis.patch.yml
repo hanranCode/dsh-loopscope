@@ -1,0 +1,6 @@
+# The bundle layer contributed to a profile. One Host row mounts the package so
+# the web client scanner can discover its `dsh.client` declaration; all panel
+# behavior lives in the browser bundle.
+- insert:
+    - id: loopscope
+      name: 'dsh-loopscope'

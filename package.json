@@ -1,0 +1,73 @@
+{
+  "name": "dsh-loopscope",
+  "version": "0.1.0",
+  "description": "LOOPScope: an agent-loop trajectory visualizer for DeepSeek Harness (DSH) — interactive LOOP cards, waterfall timing, token accounting and tool-call inspection in the web UI.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "deepseek-harness",
+    "agent-loop",
+    "loop",
+    "trajectory",
+    "visualization",
+    "observability",
+    "llm",
+    "ai-agents",
+    "typescript",
+    "react"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/host.js",
+  "exports": {
+    ".": "./lib/host.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "src",
+    "scripts",
+    "docs",
+    "fixtures",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "DESIGN.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/selfcheck.mjs",
+    "check:render": "node scripts/render-test.mjs",
+    "test": "npm run check && npm run check:render"
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0 <0.3.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanranCode/dsh-loopscope.git"
+  },
+  "homepage": "https://github.com/hanranCode/dsh-loopscope",
+  "bugs": {
+    "url": "https://github.com/hanranCode/dsh-loopscope/issues"
+  },
+  "author": "hanranV",
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

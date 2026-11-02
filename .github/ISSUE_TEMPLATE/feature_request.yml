@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest a capability for LOOPScope
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What developer question is hard to answer today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour
+      description: What should the plugin show or do? Sketches welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: input
+    id: session-size
+    attributes:
+      label: Typical Session size
+      description: Roughly how many LOOPs / tool calls does your Session have?
